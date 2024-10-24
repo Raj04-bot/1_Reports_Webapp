@@ -16,59 +16,59 @@
     <h3 class="pb-3 pt-3">Report App</h3>
 
     <form:form action="search" modelAttribute="search" method="POST">
-        <div class="row mb-3">
-            <div class="col-md-2">
-                <label for="planName">Plan Name</label>
-            </div>
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <label for="planName">Plan Name</label>
+        </div>
             <div class="col-md-4">
-                <form:select path="planName" class="form-control">
-                    <form:option value="">-Select-</form:option>
-                    <form:options items="${names}" />
-                </form:select>
-            </div>
-
-            <div class="col-md-2">
-                <label for="planStatus">Plan Status</label>
-            </div>
-            <div class="col-md-4">
-                <form:select path="planStatus" class="form-control">
-                    <form:option value="">-Select-</form:option>
-                    <form:options items="${status}" />
-                </form:select>
-            </div>
+            <form:select path="planName" class="form-control">
+                <form:option value="">-Select-</form:option>
+                <form:options items="${names}" />
+            </form:select>
         </div>
 
-        <div class="row mb-3">
-            <div class="col-md-2">
-                <label>Gender</label>
+             <div class="col-md-2">
+            <label for="planStatus">Plan Status</label>
+        </div>
+        <div class="col-md-4">
+            <form:select path="planStatus" class="form-control">
+                <form:option value="">-Select-</form:option>
+                <form:options items="${status}" />
+            </form:select>
+        </div>
+    </div>
+
+         <div class="row mb-3">
+        <div class="col-md-2">
+            <label>Gender</label>
+        </div>
+             <div class="col-md-4">
+            <div class="form-check">
+                <form:radiobutton path="gender" value="male" class="form-check-input" id="male"/>
+                <label class="form-check-label" for="male">Male</label>
             </div>
-            <div class="col-md-4">
-                <div class="form-check">
-                    <form:radiobutton path="gender" value="male" class="form-check-input" id="male"/>
-                    <label class="form-check-label" for="male">Male</label>
-                </div>
-                <div class="form-check">
-                    <form:radiobutton path="gender" value="female" class="form-check-input" id="female"/>
-                    <label class="form-check-label" for="female">Female</label>
-                </div>
+            <div class="form-check">
+                <form:radiobutton path="gender" value="female" class="form-check-input" id="female"/>
+                <label class="form-check-label" for="female">Female</label>
             </div>
         </div>
+    </div>
 
-        <div class="row mb-3">
-            <div class="col-md-2">
-                <label for="startDate">Start Date</label>
-            </div>
-            <div class="col-md-4">
-                <form:input path="startDate" type="date" class="form-control" id="startDate"/>
-            </div>
-
-            <div class="col-md-2">
-                <label for="endDate">End Date</label>
-            </div>
-            <div class="col-md-4">
-                <form:input path="endDate" type="date" class="form-control" id="endDate"/>
-            </div>
+         <div class="row mb-3">
+        <div class="col-md-2">
+            <label for="startDate">Start Date</label>
         </div>
+        <div class="col-md-4">
+            <form:input path="startDate" type="date" class="form-control" id="startDate"/>
+        </div>
+
+        <div class="col-md-2">
+            <label for="endDate">End Date</label>
+        </div>
+        <div class="col-md-4">
+            <form:input path="endDate" type="date" class="form-control" id="endDate"/>
+        </div>
+    </div>
 
         <div class="row mb-3">
             <div class="col-md-12">
@@ -103,8 +103,8 @@
 
     <div class="mt-3">
         Export: 
-        <a href="#" class="btn btn-outline-primary btn-sm">Excel</a>
-        <a href="#" class="btn btn-outline-primary btn-sm">PDF</a>
+        <a href="excel" class="btn btn-outline-primary btn-sm">Excel</a>
+        <a href="pdf" class="btn btn-outline-primary btn-sm">PDF</a>
     </div>
 </div>
 

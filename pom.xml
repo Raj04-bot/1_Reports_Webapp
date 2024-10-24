@@ -62,6 +62,13 @@
     <version>5.2.5</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/com.github.librepdf/openpdf -->
+<dependency>
+    <groupId>com.github.librepdf</groupId>
+    <artifactId>openpdf</artifactId>
+    <version>2.0.2</version>
+</dependency>
+
 
 
 		<dependency>
