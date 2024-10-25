@@ -53,7 +53,6 @@ public class ExcelGenerator {
 			
 			dataRowIndex++;
 		}
-		
 			
 		ServletOutputStream outputStream = response.getOutputStream();
 		workbook.write(outputStream);
