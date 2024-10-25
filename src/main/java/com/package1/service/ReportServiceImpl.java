@@ -21,6 +21,7 @@ import com.lowagie.text.pdf.PdfWriter;
 import com.package1.entity.CitizenPlan;
 import com.package1.repo.CitizenPlanRepo;
 import com.package1.rqst.SearchRequest;
+import com.package1.util.EmailUtils;
 import com.package1.util.ExcelGenerator;
 
 import jakarta.servlet.ServletOutputStream;
@@ -34,7 +35,10 @@ public class ReportServiceImpl implements ReportService{
 	
 	@Autowired
 	private ExcelGenerator excelGenerator;
-
+	
+	@Autowired
+	private EmailUtils email;
+	
 	@Override
 	public List<String> getPlanNames() {
 		List<String> planNames = citizenPlanRepo.getPalnNames();
@@ -73,6 +77,11 @@ public class ReportServiceImpl implements ReportService{
 	public boolean exportExcel(HttpServletResponse response) throws Exception {
 		List<CitizenPlan> plans=citizenPlanRepo.findAll();
 		excelGenerator.generate(response, plans);
+		String subject = "Test mail";
+		String body ="<h1>Test mail Strring</h1>";
+		String to ="dasrajranjan96@outlook.com";
+		
+		email.sendEmail( subject, body, to);
 		
 		
 		return true;
